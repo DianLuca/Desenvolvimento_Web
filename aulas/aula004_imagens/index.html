@@ -14,19 +14,23 @@
                 <h2>1. Exemplo de uso da tag 'figure'</h2>
                 <p>A tag 'figure' é usada para agrupar uma imagem com sua legenda ou descrição</p>
                 <figure>
-                    <img src="img/airplane-wing-sunset-blue-sky.jpg" style="max-width:1600px" alt="Asa de um avião">
-                    <figcaption>Asa de um avião</figcaption>
+                    <img src="img/airplane-wing-sunset-blue-sky.jpg" style="max-width:1000px" alt="Asa de um avião vista de sua janela.">
+                    <figcaption>Asa de um avião vista de sua janela.</figcaption>
                 </figure>
             </article>
+        </section>
         <section>
-            <h2>Filmes para Assitir</h2>
             <article>
-                <ul>
-                    <li>Guia do Mochileiro das Galáxias</li>
-                    <li>Homem-Aranha: Além do Aranhaverso - Parte 2</li>
-                    <li>Inception</li>
-                    <li>O Lobo de Wall Street</li>
-                </ul>
+                <h2>2. Exemplo de uso da tag 'picture'</h2>
+                <p>A tag 'picture' é usada para fornecer diferentes versões de uma imagem,
+                    de acordo com o tamanho da tela ou a resolução.</p>
+                <p>O navegador escolhe automaticamente a versão mais adequada da imagem.</p>
+                <picture>
+                    <source src="img/airplane-wing-sunset-blue-sky2.jpg" media="(max-width:1920px)" alt="Asa de um avião vista de sua janela.">
+                    <source src="img/airplane-wing-sunset-blue-sky.jpg" media="(max-width:1280px)" alt="Asa de um avião vista de sua janela.">
+                    <img src="img/airplane-wing-sunset-blue-sky.jpg" style="max-width:900px" alt="Asa de um avião vista de sua janela.">
+                    <figcaption>Asa de um avião vista de sua janela.</figcaption>
+                </picture>
             </article>
         </section>
     </main>
