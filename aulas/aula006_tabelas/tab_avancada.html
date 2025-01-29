@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabelas - HTML 5</title>
+  </head>
+  <body>
+    <h1>Estudo de Tabelas - Tabela Avançada</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Ir para a Tabela Simples</a></li>
+        <li><a href="tab_intermediaria.html">Ir para a Tabela Intermediária</a></li>
+      </ul>
+    </nav>
+    <main>
+      <h2>Tabela Avançada</h2>
+      <table border="1">
+        <caption>
+          Tabela de Funcionários
+        </caption>
+        <thead>
+          <tr>
+            <th rowspan="2">ID</th>
+            <th rowspan="2">Nome</th>
+            <th colspan="2">Salário</th>
+            <th rowspan="2">Departamento</th>
+          </tr>
+          <tr>
+            <th>Base</th>
+            <th>Comissões</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Alice</td>
+            <td>R$ 3000,00</td>
+            <td>R$ 500,00</td>
+            <td>Vendas</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Bob</td>
+            <td>R$ 4000,00</td>
+            <td>R$ 700,00</td>
+            <td>TI</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Charlie</td>
+            <td>R$ 3500,00</td>
+            <td>R$ 300,00</td>
+            <td>Marketing</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="5" style="text-align: center;">Fim da Tabela</td>
+          </tr>
+        </tfoot>
+      </table>
+    </main>
+  </body>
+</html>

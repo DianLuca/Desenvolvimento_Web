@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabelas - HTML 5</title>
+  </head>
+  <body>
+    <h1>Estudo de Tabelas - Tabela Simples</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Ir para a Tabela Simples</a></li>
+        <li><a href="tab_avancada.html">Ir para a Tabela Avançada</a></li>
+      </ul>
+    </nav>
+    <main>
+      <h2>Tabela Intermediária</h2>
+      <table border="1">
+        <caption>
+          Tabela de Vendas
+        </caption>
+        <thead>
+          <tr>
+            <th>Produto</th>
+            <th>Quantidade</th>
+            <th>Preço Unitário</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Produto A</td>
+            <td>10</td>
+            <td>R$ 20,00</td>
+            <td>R$ 200,00</td>
+          </tr>
+          <tr>
+            <td>Produto B</td>
+            <td>5</td>
+            <td>R$ 50,00</td>
+            <td>R$ 250,00</td>
+          </tr>
+          <tr>
+            <td>Produto C</td>
+            <td>2</td>
+            <td>R$ 100,00</td>
+            <td>R$ 200,00</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <!-- Colspan geral uma linha única com 3 campos -->
+            <td colspan="3"><strong>Total Geral</strong></td>
+            <td>R$ 650,00</td>
+          </tr>
+        </tfoot>
+      </table>
+    </main>
+  </body>
+</html>
