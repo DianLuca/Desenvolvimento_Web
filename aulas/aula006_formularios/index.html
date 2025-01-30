@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulários - HTML 5</title>
+  </head>
+  <body>
+    <h1>Formulário de Contato</h1>
+
+    <form action="/enviar" method="post">
+      <label for="nome">Nome:</label>
+      <input type="text" name="nome" id="nome" required>
+      <br><br>
+
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="email" required>
+      <br><br>
+
+      <label for="Mensagem">Mensagem:</label>
+      <textarea id="Mensagem" name="Mensagem" rows="4" required></textarea>
+      <br><br>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </body>
+</html>
