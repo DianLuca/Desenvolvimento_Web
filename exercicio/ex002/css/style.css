@@ -2,13 +2,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 header {
     background-color: #000000;
 }
 
-picture img{
+picture img {
     height: 90vh;
     width: 100%;
 }
@@ -41,6 +42,7 @@ nav a:hover {
 section {
     background-color: #000000;
     color: #ffffff;
+    padding: 10px;
 }
 
 article {
@@ -50,9 +52,7 @@ article {
     padding: 10px 20px;
 }
 
-
-
-article div{
+article div {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -65,9 +65,8 @@ article div{
     color: #ffffff;
 }
 
-
-div img{
-    height:400px;
+div img {
+    height: 400px;
     width: 380px;
     border-radius: 10px;
 }
@@ -80,7 +79,7 @@ a {
 section .botao-inicio {
     display: flex;
     justify-content: center;
-    margin: 5px 20px;
+    margin: 0px 20px;
     padding: 10px;
 }
 
@@ -89,10 +88,9 @@ section .botao-inicio {
     border-radius: 8px 8px 0 0;
 }
 
-.botao-inicio:hover{
+.botao-inicio:hover {
     background-color: #555555;
 }
-
 
 .info-oscar {
     display: flex;
@@ -100,21 +98,21 @@ section .botao-inicio {
     gap: 20px;
 }
 
-.info-oscar h3{
+.info-oscar h3 {
     font-size: 2em;
 }
 
-.info-oscar div p{
+.info-oscar div p {
     width: 400px;
     font-size: 1.2em;
     margin-top: 10px;
 }
 
-.info-oscar img{
+.info-oscar img {
     height: 500px;
 }
 
-footer img{
+footer img {
     height: 300px;
     background-color: #000000;
     width: 100%;
