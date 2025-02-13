@@ -1,71 +1,137 @@
+<!-- Atividade: Desenvolvimento de uma Landing Page em HTML5 e CSS3
+Nome: Dian Luca         Turma: 0152 -->
+
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Landing Page - Cinema</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Exercício 002 - Landing Page Sobre Cinema</title>
+  </head>
 
-<!-- tem que ter âncoras -->
+  <!-- tem que ter âncoras -->
 
-<body>
-    <header>
-        <h1>Exercício 002 - Landing Page Sobre Cinema</h1>
+  <body>
+    <header id="inicio">
+      <picture>
+        <source
+          media="(max-width: 1000px)"
+          srcset="img/movie-background-collage-pequeno.jpg"
+        />
+        <source
+          media="(min-width: 1500px)"
+          srcset="img/movie-background-collage-medio.jpg"
+        />
+        <source
+          media="(min-width: 2000px)"
+          srcset="img/movie-background-collage-grande.jpg"
+        />
+        <img
+          src="img/movie-background-collage-original.jpg"
+          alt="Imagem de rolos de filme"
+        />
+      </picture>
     </header>
 
     <nav>
-        <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
+      <ul>
+        <li><a href="#filmes">Filmes</a></li>
+        <li><a href="#oscar">Oscar</a></li>
+      </ul>
     </nav>
     <main>
-        <section id="filmes">
-            <article>
-                <div>
-                    <h3></h3>
-                    <p></p>
-                    <figcaption>
-                        <img src="" alt="">
-                    </figcaption>
-                </div>
-            </article>
-            <article>
-                <div>
-                    <h3></h3>
-                    <p></p>
-                    <figcaption>
-                        <img src="" alt="">
-                    </figcaption>
-                </div>
-            </article>
-        </section>
-        <section id="series">
-            <article>
-                <div>
-                    <h3></h3>
-                    <p></p>
-                    <figcaption>
-                        <img src="" alt="">
-                    </figcaption>
-                </div>
-            </article>
-            <article>
-                <div>
-                    <h3></h3>
-                    <p></p>
-                    <figcaption>
-                        <img src="" alt="">
-                    </figcaption>
-                </div>
-            </article>
-        </section>
+      <section id="filmes">
+        <h2>Catálogo de Filmes</h2>
+        <article>
+          <div>
+            <h3>Interestelar</h3>
+            <p>
+              Uma equipe de exploradores viaja através de um buraco de minhoca
+              no espaço, na tentativa de garantir a sobrevivência da humanidade.
+            </p>
+            <figure>
+              <img
+                src="img/filmes/interstellar.jpg"
+                alt="Pôster do filme Interestelar"
+              />
+              <figcaption>
+                Imagem obtida no site:
+                <a href="https://www.imdb.com/pt/?ref_=nv_home">IMDB</a>
+              </figcaption>
+            </figure>
+          </div>
+          <div>
+            <h3>O Senhor dos Anéis: A Sociedade do Anel</h3>
+            <p>
+              Um manso hobbit do Condado e oito companheiros partem em uma
+              jornada para destruir o poderoso Um Anel e salvar a Terra-média
+              das Trevas.
+            </p>
+            <figure>
+              <img
+                src="img/filmes/lord-of-the-rings-fellow.jpg"
+                alt="Pôster do filme O Senhor dos Anéis: A Sociedade do Anel"
+              />
+              <figcaption>
+                Imagem obtida no site:
+                <a href="https://www.imdb.com/pt/?ref_=nv_home">IMDB</a>
+              </figcaption>
+            </figure>
+          </div>
+          <div>
+            <h3>Ainda Estou Aqui</h3>
+            <p>
+              Uma mulher casada com um ex-político durante a ditadura militar no
+              Brasil é obrigada a se reinventar e a traçar um novo destino para
+              si e os filhos depois que a vida de sua família é impactada por um
+              ato violento e arbitrário.
+            </p>
+            <figure>
+              <img
+                src="img/filmes/i'm-still-here.jpg"
+                alt="Pôster do filme Ainda Estou Aqui"
+              />
+              <figcaption>
+                Imagem obtida no site:
+                <a href="https://www.imdb.com/pt/?ref_=nv_home">IMDB</a>
+              </figcaption>
+            </figure>
+          </div>
+        </article>
+        <a class="botao-inicio" href="#inicio">Voltar ao início</a>
+      </section>
+      <section id="oscar">
+        <h2>Oscar</h2>
+        <div class="info-oscar">
+          <figure>
+            <img src="img/estatueta-oscar.jpg" alt="Estatueta do Oscar" />
+            <figcaption></figcaption>
+          </figure>
+          <div>
+            <h3>Sobre o Oscar:</h3>
+            <p>
+              O Oscar (The Academy Awards ou The Oscars) é a mais famosa
+              premiação de cinema que existe no mundo. Criado em 1927, teve sua
+              primeira cerimônia em 1929, na cidade de Los Angeles. Essa é a
+              premiação de cinema mais antiga em vigor, e sua função é premiar
+              as melhores produções cinematográficas. Atualmente, é o evento
+              mais importante do cinema mundial. É transmitido para diversos
+              países e assistido por milhões de pessoas em todo o mundo, mas,
+              desde 2020, a audiência tem se tornado uma questão delicada pela
+              baixa quantidade de espectadores, apesar de 2023 ter registrado um
+              aumento. As cerimônias dos últimos anos foram afetadas de diversas
+              maneiras e até uma equipe de crise foi criada pela Academia. <br>
+               <a href="https://brasilescola.uol.com.br/curiosidades/oscar.htm">Saiba mais</a>
+            </p>
+          </div>
+        </div>
+        <a class="botao-inicio" href="#inicio">Voltar ao início</a>
+      </section>
     </main>
 
     <footer>
-        <p>&copy; - </p>
+      <img src="img/cinema-com-assentos-e-tela-panoramica-em-branco.png" alt="Assentos da sala de cinema">
     </footer>
-</body>
+  </body>
 </html>
