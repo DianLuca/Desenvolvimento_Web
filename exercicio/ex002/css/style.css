@@ -6,10 +6,6 @@
     color: #f0f0f0;
 }
 
-.container {
-    width: 85%;
-    margin: auto;
-}
 
 header, main {
     background-color: #000000;
@@ -54,7 +50,7 @@ hr {
 article {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding: 15px 0;
 }
 
@@ -62,7 +58,7 @@ article div {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 510px;
+    height: 650px;
     width: 400px;
     border-radius: 5px;
     gap: 10px;
@@ -71,14 +67,9 @@ article div {
 }
 
 div img {
-    height: 350px;
-    width: 370px;
     border-radius: 2px;
 }
 
-.card-img {
-    margin: 10px auto;
-}
 
 section .botao-inicio {
     display: flex;
@@ -88,6 +79,16 @@ section .botao-inicio {
     width: 150px;
     border-radius: 8px 8px 0 0;
 }
+
+.container {
+    width: 85%;
+    margin: auto;
+}
+
+.card-img {
+    margin: 10px auto;
+}
+
 
 .botao-inicio:hover {
     background-color: #555555;
