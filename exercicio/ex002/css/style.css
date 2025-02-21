@@ -11,11 +11,11 @@
     margin: auto;
 }
 
-header {
+header, main {
     background-color: #000000;
 }
 
-picture img {
+header img{
     height: 70vh;
     width: 100%;
 }
@@ -46,28 +46,25 @@ nav li:hover {
     background-color: #555555;
 }
 
-main {
-    background-color: #000000;
-}
-
-section {
-    padding: 10px;
+hr {
+    margin: 10px 0;
+    color: #f0f0f0;
 }
 
 article {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 10px 20px;
+    justify-content: space-between;
+    padding: 15px 0;
 }
 
 article div {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 550px;
+    height: 510px;
     width: 400px;
-    border-radius: 10px;
+    border-radius: 5px;
     gap: 10px;
     padding: 10px;
     background-color: #1a1a1a;
@@ -76,9 +73,12 @@ article div {
 div img {
     height: 350px;
     width: 370px;
-    border-radius: 10px;
+    border-radius: 2px;
 }
 
+.card-img {
+    margin: 10px auto;
+}
 
 section .botao-inicio {
     display: flex;
