@@ -1,0 +1,20 @@
+body {
+    color: #333333;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    /* Não será herdado, essa propriedade é específica. */
+    border: 1px solid #fa8072;
+}
+
+header {
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    background-color: #222222;
+    color: #ffffff;
+    padding: 10px;
+    text-align: center;
+}
