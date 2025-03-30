@@ -102,17 +102,6 @@ h1 {
     text-align: center;
 }
 
-article h2 {
-    text-align: center;
-    font-size: 1.5em;
-    margin-top: 20px;
-}
-
-article p {
-    margin-top: 10px;
-    font-size: 1.2em;
-}
-
 section a  {
     text-align: center;
     height: 50px;
@@ -130,12 +119,22 @@ section a:hover {
     transition: 0.5s;
 }
 
+article h2 {
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 30px;
+}
+
+article p {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
 article img{
     background-color: #000000;
     width: 400px;
     height: 500px;
-    object-fit: cover;
-    margin: 15px auto;
+    margin: 25px auto;
 }
 
 .float-article img{
@@ -143,12 +142,19 @@ article img{
     width: 200px;
     float: left;
     margin-right: 40px;
+    border-radius: 50%;
 }
 
 footer {
     text-align: center;
     background-color: #000000;
-    color: #f9b707;
+    color: #ffffff;
     padding: 10px;
     font-size: 1.2em;
+}
+
+footer a {
+    font-size: 1em;
+    height: 20px;
+    display: inline-block;
 }
