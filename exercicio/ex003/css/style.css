@@ -97,8 +97,8 @@ h1 {
 }
 
 .barra {
-    height: 3px;
-    width: 350px;
+    height: 1px;
+    width: 100%;
     margin-top: 5px;
     border-radius: 1px;
     background-color: #f9b707;
@@ -114,6 +114,7 @@ h1 {
 
 section a, button  {
     text-align: center;
+    font-size: 1.5em;
     height: 50px;
     width: 200px;
     border-radius: 20px;
@@ -139,6 +140,11 @@ article p {
     margin-top: 20px;
     font-size: 1.2em;
     line-height: 25px;
+}
+
+.article-sobre {
+    display: flex;
+    gap: 15px;
 }
 
 article .sobre{
@@ -181,7 +187,7 @@ footer a {
 }
 
 main{
-    margin-top: 11vh;
+    margin-top: 13vh;
     min-height: 85vh;
     text-align: center;
 }
@@ -193,6 +199,7 @@ main{
 }
 
 form {
+    width: 900px;
     margin: 30px auto;
     padding: 30px;
     box-shadow: 0px 0px 5px #333333;
@@ -209,7 +216,7 @@ label {
 input[type='text'],
 input[type='email'],
 select, textarea {
-    width: 98%;
+    width: 100%;
     padding: 10px;
     margin-top: 5px;
     border: 1px solid #888888;
