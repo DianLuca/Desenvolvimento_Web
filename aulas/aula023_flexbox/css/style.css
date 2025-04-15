@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    flex: 1;
+}
+
+main > article {
+    flex: 1;
+    order: 1;
+}
+
+main > nav, 
+main > aside {
+    flex: 0 0 20vw;
+}
+
+main > nav {
+    background-color: #d7e8d4;
+    order: 3;
+}
+
+main > aside {
+    background-color: #f5f5dc;
+    order: 2;
+}
+
+header, footer {
+    background-color: #f27406;
+    height: 20vh;
+}
