@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula001 - JavaScript</title>
+</head>
+<body>
+    <!-- Exemplo ruim -->
+    <button onclick="alert('Hello World!')">Clique</button>
+
+    <!-- Exemplo correto para não obstruir o código -->
+     <button id="meuBotao">Clique</button>
+     <script>
+        document.getElementById('meuBotao').addEventListener('click', () => {
+            alert('Hello World!')
+        })
+     </script>
+</body>
+</html>
