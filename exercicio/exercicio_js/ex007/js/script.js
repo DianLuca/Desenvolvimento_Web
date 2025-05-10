@@ -1,44 +1,30 @@
 document.addEventListener('DOMContentLoaded', function () {
-    let valor1 = document.querySelector('#valor1');
+    let input = document.querySelector('#valor');
 
-    let valor2 = document.querySelector('#valor2');
-
-    const adicao = document.querySelector('#adicao');
-    const subtracao = document.querySelector('#subtracao');
-    const multiplicacao = document.querySelector('#multiplicacao');
-    const divisao = document.querySelector('#divisao');
+    const verificar = document.querySelector('#verificar');
 
     let resultado = document.querySelector('#resultado');
 
-    // Posso fazer isso com switch
+    // Pega um número aleatório entre 0 e 1
+    const numAleatorio = Math.random() * 10;
 
-    adicao.addEventListener('click', function() {
-        let operacao = parseFloat(valor1.value) + parseFloat(valor2.value);
+    // Arredondar pro inteiro mais próximo
+    const arrendondar = Math.round(numAleatorio);
 
-        resultado.textContent = operacao;
-    });
+    console.log(arrendondar);
 
-    subtracao.addEventListener('click', function() {
-        let operacao = parseFloat(valor1.value) - parseFloat(valor2.value);
+    verificar.addEventListener('click', function() {
 
-        resultado.textContent = operacao;
-    });
+        let valor = input.value;
 
-    multiplicacao.addEventListener('click', function() {
-        let operacao = parseFloat(valor1.value) * parseFloat(valor2.value);
-
-        resultado.textContent = operacao;
-    });
-
-    divisao.addEventListener('click', function() {
-        
-        if (valor2.value == 0) {
-            resultado.textContent = 'Você não pode realizar um divisão por 0!';
+        if (arrendondar == valor) {
+            resultado.textContent = 'Você acertou!'
+        } else if (valor < arrendondar) {
+            resultado.textContent = 'Tente um valor maior'
         } else {
-            let operacao = parseFloat(valor1.value) / parseFloat(valor2.value);
-
-            resultado.textContent = operacao;
+            resultado.textContent = 'Tente um valor menor'
         }
+
     });
 
 })

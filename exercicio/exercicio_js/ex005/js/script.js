@@ -1,44 +1,29 @@
 document.addEventListener('DOMContentLoaded', function () {
-    let valor1 = document.querySelector('#valor1');
+    let texto = document.querySelector('#texto');
 
-    let valor2 = document.querySelector('#valor2');
-
-    const adicao = document.querySelector('#adicao');
-    const subtracao = document.querySelector('#subtracao');
-    const multiplicacao = document.querySelector('#multiplicacao');
-    const divisao = document.querySelector('#divisao');
+    const inserir = document.querySelector('#inserir');
 
     let resultado = document.querySelector('#resultado');
 
-    // Posso fazer isso com switch
-
-    adicao.addEventListener('click', function() {
-        let operacao = parseFloat(valor1.value) + parseFloat(valor2.value);
-
-        resultado.textContent = operacao;
-    });
-
-    subtracao.addEventListener('click', function() {
-        let operacao = parseFloat(valor1.value) - parseFloat(valor2.value);
-
-        resultado.textContent = operacao;
-    });
-
-    multiplicacao.addEventListener('click', function() {
-        let operacao = parseFloat(valor1.value) * parseFloat(valor2.value);
-
-        resultado.textContent = operacao;
-    });
-
-    divisao.addEventListener('click', function() {
+    // Criando a lista
+    const ul = document.createElement('ul');
+    
+    resultado.appendChild(ul);
+    
+    // Criando cada item da lista
+    const addItem = texto => {
+        const li = document.createElement('li');
         
-        if (valor2.value == 0) {
-            resultado.textContent = 'Você não pode realizar um divisão por 0!';
-        } else {
-            let operacao = parseFloat(valor1.value) / parseFloat(valor2.value);
+        li.textContent = texto;
 
-            resultado.textContent = operacao;
-        }
+        ul.appendChild(li);
+
+    }
+
+    inserir.addEventListener('click', () => {
+        let textoInserido = texto.value;
+
+        addItem(textoInserido);
     });
 
 })

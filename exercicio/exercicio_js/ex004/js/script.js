@@ -1,44 +1,25 @@
 document.addEventListener('DOMContentLoaded', function () {
-    let valor1 = document.querySelector('#valor1');
 
-    let valor2 = document.querySelector('#valor2');
+    const vermelho = document.querySelector('#vermelho');
+    const verde = document.querySelector('#verde');
+    const azul = document.querySelector('#azul');
 
-    const adicao = document.querySelector('#adicao');
-    const subtracao = document.querySelector('#subtracao');
-    const multiplicacao = document.querySelector('#multiplicacao');
-    const divisao = document.querySelector('#divisao');
+    let resultado = document.querySelector('#saida');
 
-    let resultado = document.querySelector('#resultado');
-
-    // Posso fazer isso com switch
-
-    adicao.addEventListener('click', function() {
-        let operacao = parseFloat(valor1.value) + parseFloat(valor2.value);
-
-        resultado.textContent = operacao;
+    vermelho.addEventListener('click', function() {
+        resultado.style.backgroundColor = '#FF0000';
+        //outra forma resultado.setAttribute("class", "vermelho") para criar uma classe e mudar via css;
     });
 
-    subtracao.addEventListener('click', function() {
-        let operacao = parseFloat(valor1.value) - parseFloat(valor2.value);
-
-        resultado.textContent = operacao;
-    });
-
-    multiplicacao.addEventListener('click', function() {
-        let operacao = parseFloat(valor1.value) * parseFloat(valor2.value);
-
-        resultado.textContent = operacao;
-    });
-
-    divisao.addEventListener('click', function() {
+    verde.addEventListener('click', function() {
+        resultado.style.backgroundColor = '#00FF00';
         
-        if (valor2.value == 0) {
-            resultado.textContent = 'Você não pode realizar um divisão por 0!';
-        } else {
-            let operacao = parseFloat(valor1.value) / parseFloat(valor2.value);
-
-            resultado.textContent = operacao;
-        }
     });
+
+    azul.addEventListener('click', function() {
+        resultado.style.backgroundColor = '#0000FF';
+    });
+
+    
 
 })

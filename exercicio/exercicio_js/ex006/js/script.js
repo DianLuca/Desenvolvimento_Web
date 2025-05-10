@@ -1,43 +1,27 @@
 document.addEventListener('DOMContentLoaded', function () {
-    let valor1 = document.querySelector('#valor1');
+    let texto = document.querySelector('#texto');
 
-    let valor2 = document.querySelector('#valor2');
-
-    const adicao = document.querySelector('#adicao');
-    const subtracao = document.querySelector('#subtracao');
-    const multiplicacao = document.querySelector('#multiplicacao');
-    const divisao = document.querySelector('#divisao');
-
+    const verificar = document.querySelector('#verificar');
+    
     let resultado = document.querySelector('#resultado');
 
-    // Posso fazer isso com switch
+    verificar.addEventListener('click', function() {
 
-    adicao.addEventListener('click', function() {
-        let operacao = parseFloat(valor1.value) + parseFloat(valor2.value);
+        let conteudo = texto.value;
+        // Para transformar o texto todo em minúsculo e remover espaços
+        let replacer = /[^a-z0-9]/gi;
 
-        resultado.textContent = operacao;
-    });
+        let converterTexto = conteudo.toLowerCase().replace(replacer, '');
 
-    subtracao.addEventListener('click', function() {
-        let operacao = parseFloat(valor1.value) - parseFloat(valor2.value);
+        // .split para converter de string para array e join para voltar, reverse para inverter
+        let inverterTexto = converterTexto.split('').reverse().join('');
 
-        resultado.textContent = operacao;
-    });
+        if (converterTexto == inverterTexto){
 
-    multiplicacao.addEventListener('click', function() {
-        let operacao = parseFloat(valor1.value) * parseFloat(valor2.value);
-
-        resultado.textContent = operacao;
-    });
-
-    divisao.addEventListener('click', function() {
-        
-        if (valor2.value == 0) {
-            resultado.textContent = 'Você não pode realizar um divisão por 0!';
+            resultado.textContent = `A palavra/frase é um palíndromo!`;
         } else {
-            let operacao = parseFloat(valor1.value) / parseFloat(valor2.value);
 
-            resultado.textContent = operacao;
+            resultado.textContent = 'A palavra/frase não é um palíndromo!';
         }
     });
 

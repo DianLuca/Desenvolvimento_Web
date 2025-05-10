@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // Para pegar o que foi inserido(value) em ver o número de caracteres(length)
         numCaracteres = texto.value.length; 
 
-        resultado.textContent = numCaracteres;
+        resultado.textContent = `O número de caracter(es) é de: ${numCaracteres}`;
     })
 
 })
