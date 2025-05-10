@@ -1,44 +1,19 @@
 document.addEventListener('DOMContentLoaded', function () {
-    let valor1 = document.querySelector('#valor1');
+    const corpoPag = document.querySelector('body');
 
-    let valor2 = document.querySelector('#valor2');
+    const alternar = document.querySelector('#alternar');
 
-    const adicao = document.querySelector('#adicao');
-    const subtracao = document.querySelector('#subtracao');
-    const multiplicacao = document.querySelector('#multiplicacao');
-    const divisao = document.querySelector('#divisao');
+    let corpo = corpoPag.classList;
 
-    let resultado = document.querySelector('#resultado');
-
-    // Posso fazer isso com switch
-
-    adicao.addEventListener('click', function() {
-        let operacao = parseFloat(valor1.value) + parseFloat(valor2.value);
-
-        resultado.textContent = operacao;
-    });
-
-    subtracao.addEventListener('click', function() {
-        let operacao = parseFloat(valor1.value) - parseFloat(valor2.value);
-
-        resultado.textContent = operacao;
-    });
-
-    multiplicacao.addEventListener('click', function() {
-        let operacao = parseFloat(valor1.value) * parseFloat(valor2.value);
-
-        resultado.textContent = operacao;
-    });
-
-    divisao.addEventListener('click', function() {
+    alternar.addEventListener('click', ()=> {
         
-        if (valor2.value == 0) {
-            resultado.textContent = 'Você não pode realizar um divisão por 0!';
+        if ((corpo.value == '') | (corpo.value == 'white')) {
+            // .toggle remove ou adicionar um classe no elemento
+            corpo.toggle('black');
+            // alternar.toggle('background-image', '../img/light_mode.svg');
         } else {
-            let operacao = parseFloat(valor1.value) / parseFloat(valor2.value);
-
-            resultado.textContent = operacao;
+            corpo.toggle('white');
         }
-    });
+    })
 
 })

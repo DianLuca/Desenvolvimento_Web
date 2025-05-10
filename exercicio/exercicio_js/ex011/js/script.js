@@ -1,44 +1,43 @@
 document.addEventListener('DOMContentLoaded', function () {
-    let valor1 = document.querySelector('#valor1');
+    let input = document.querySelector('#valor');
 
-    let valor2 = document.querySelector('#valor2');
-
-    const adicao = document.querySelector('#adicao');
-    const subtracao = document.querySelector('#subtracao');
-    const multiplicacao = document.querySelector('#multiplicacao');
-    const divisao = document.querySelector('#divisao');
+    const btn = document.querySelector('#resolver');
 
     let resultado = document.querySelector('#resultado');
 
-    // Posso fazer isso com switch
+    const limpar = () => ul.innerHTML = '';
 
-    adicao.addEventListener('click', function() {
-        let operacao = parseFloat(valor1.value) + parseFloat(valor2.value);
+    const ul = document.createElement('ul');
 
-        resultado.textContent = operacao;
-    });
+    resultado.appendChild(ul);
 
-    subtracao.addEventListener('click', function() {
-        let operacao = parseFloat(valor1.value) - parseFloat(valor2.value);
+    const criandoItem = texto => {
+        const li = document.createElement('li');
 
-        resultado.textContent = operacao;
-    });
+        li.textContent = texto;
 
-    multiplicacao.addEventListener('click', function() {
-        let operacao = parseFloat(valor1.value) * parseFloat(valor2.value);
+        ul.appendChild(li);
+    }
 
-        resultado.textContent = operacao;
-    });
+    btn.addEventListener('click', ()=> {
 
-    divisao.addEventListener('click', function() {
-        
-        if (valor2.value == 0) {
-            resultado.textContent = 'Você não pode realizar um divisão por 0!';
+        let num = parseFloat(input.value);
+
+        if (input.value == '') {
+            limpar();
+
+            criandoItem('Insira um valor para executar a operação!');
+
         } else {
-            let operacao = parseFloat(valor1.value) / parseFloat(valor2.value);
+            limpar();
+            for(let i = 1; i <=10; i++){
+        
+                let mult = num * i;
 
-            resultado.textContent = operacao;
-        }
-    });
+                criandoItem(`${num} x ${i} = ${mult}`);
+            };
+        };
+
+    })
 
 })

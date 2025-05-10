@@ -5,8 +5,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     let resultado = document.querySelector('#resultado');
 
-    // Posso fazer isso com switch
-
     btn.addEventListener('click', function() {
 
         let num = valor.value;
