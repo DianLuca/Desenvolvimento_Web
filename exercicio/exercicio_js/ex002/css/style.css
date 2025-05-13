@@ -1,1 +1,59 @@
 /* Criar o css do exercício */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #000000;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 800px;
+    border-radius: 5px;
+}
+
+
+article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    width: 100%;
+}
+
+button {
+    align-items: center;
+    width: 80%;
+    font-size: 2em;
+    padding: 5px;
+}
+
+input{
+    width: 80%;
+    padding: 5px;
+    margin-top: 10px;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+
+h1, #resultado {
+    text-align: center;
+    width: 80%;
+    font-size: 2em;
+    color: #000000;
+}

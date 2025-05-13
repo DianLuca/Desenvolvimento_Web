@@ -20,9 +20,9 @@ document.addEventListener('DOMContentLoaded', function () {
         if (arrendondar == valor) {
             resultado.textContent = 'Você acertou!'
         } else if (valor < arrendondar) {
-            resultado.textContent = 'Tente um valor maior'
+            resultado.textContent = 'Tente um valor maior.'
         } else {
-            resultado.textContent = 'Tente um valor menor'
+            resultado.textContent = 'Tente um valor menor.'
         }
 
     });

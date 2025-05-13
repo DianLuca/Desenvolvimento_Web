@@ -21,9 +21,14 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     inserir.addEventListener('click', () => {
-        let textoInserido = texto.value;
 
-        addItem(textoInserido);
+        if (texto.value != '') {
+            let textoInserido = texto.value;
+    
+            addItem(textoInserido);
+        } else {
+            alert('Insira um texto para adicionar uma tarefa!');
+        }
     });
 
 })

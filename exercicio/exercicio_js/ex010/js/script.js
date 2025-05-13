@@ -3,16 +3,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
     let resultado = document.querySelector('#resultado');
 
-    const numCaracteres = input.value.length;
-    const letrasMaiusculas = /[A-Z]/.test(input.value);
-    const letrasMinusculas = /[a-z]/.test(input.value);
-    const numeros = /[0-9]/.test(input.value);
-
+    let verificado = 'Insira algo para verificar!';
+    
     input.addEventListener('input', () => {
-        if (numCaracteres && letrasMaiusculas && letrasMinusculas && numeros) {
-            resultado.textContent = 'Você possui uma senha forte.';
+
+        const numCaracteres = input.value.length;
+        const letrasMaiusculas = /[A-Z]/.test(input.value);
+        const letrasMinusculas = /[a-z]/.test(input.value);
+        const numeros = /[0-9]/.test(input.value);
+        
+        if ((numCaracteres >= 8) && letrasMaiusculas && letrasMinusculas && numeros) {
+            verificado = 'Você possui uma senha forte.';
         } else {
-            resultado.textContent = 'Você possui uma senha fraca.';
+            verificado = 'Você possui uma senha fraca.';
         }
+
+        resultado.textContent = verificado;
     })
 })

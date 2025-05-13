@@ -13,32 +13,55 @@ document.addEventListener('DOMContentLoaded', function () {
     // Posso fazer isso com switch
 
     adicao.addEventListener('click', function() {
-        let operacao = parseFloat(valor1.value) + parseFloat(valor2.value);
 
-        resultado.textContent = operacao;
+        if (valor1.value == '' || valor2.value == '') {
+            resultado.textContent = 'Insira valores para executar as operações!';
+        } else {
+            let operacao = parseFloat(valor1.value) + parseFloat(valor2.value);
+
+            resultado.textContent = operacao;
+        };
     });
 
     subtracao.addEventListener('click', function() {
-        let operacao = parseFloat(valor1.value) - parseFloat(valor2.value);
 
-        resultado.textContent = operacao;
+        if (valor1.value == '' || valor2.value == '') {
+            resultado.textContent = 'Insira valores para executar as operações!';
+        } else {
+            
+            let operacao = parseFloat(valor1.value) - parseFloat(valor2.value);
+    
+            resultado.textContent = operacao;
+        };
     });
 
     multiplicacao.addEventListener('click', function() {
-        let operacao = parseFloat(valor1.value) * parseFloat(valor2.value);
 
-        resultado.textContent = operacao;
+        if (valor1.value == '' || valor2.value == '') {
+            resultado.textContent = 'Insira valores para executar as operações!';
+        } else {
+            
+            let operacao = parseFloat(valor1.value) * parseFloat(valor2.value);
+    
+            resultado.textContent = operacao;
+        };
     });
 
     divisao.addEventListener('click', function() {
-        
-        if (valor2.value == 0) {
-            resultado.textContent = 'Você não pode realizar um divisão por 0!';
-        } else {
-            let operacao = parseFloat(valor1.value) / parseFloat(valor2.value);
 
-            resultado.textContent = operacao;
-        }
+        if (valor1.value == '' || valor2.value == '') {
+            resultado.textContent = 'Insira valores para executar as operações!';
+        } else {
+
+            if (valor2.value == 0) {
+                resultado.textContent = 'Você não pode realizar um divisão por 0!';
+            } else {
+                let operacao = parseFloat(valor1.value) / parseFloat(valor2.value);
+    
+                resultado.textContent = operacao;
+            };
+        };
+        
     });
 
 })
