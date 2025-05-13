@@ -1,44 +1,18 @@
 document.addEventListener('DOMContentLoaded', function () {
-    let valor1 = document.querySelector('#valor1');
-
-    let valor2 = document.querySelector('#valor2');
-
-    const adicao = document.querySelector('#adicao');
-    const subtracao = document.querySelector('#subtracao');
-    const multiplicacao = document.querySelector('#multiplicacao');
-    const divisao = document.querySelector('#divisao');
+    let input = document.querySelector('#valor');
 
     let resultado = document.querySelector('#resultado');
 
-    // Posso fazer isso com switch
+    const numCaracteres = input.value.length;
+    const letrasMaiusculas = /[A-Z]/.test(input.value);
+    const letrasMinusculas = /[a-z]/.test(input.value);
+    const numeros = /[0-9]/.test(input.value);
 
-    adicao.addEventListener('click', function() {
-        let operacao = parseFloat(valor1.value) + parseFloat(valor2.value);
-
-        resultado.textContent = operacao;
-    });
-
-    subtracao.addEventListener('click', function() {
-        let operacao = parseFloat(valor1.value) - parseFloat(valor2.value);
-
-        resultado.textContent = operacao;
-    });
-
-    multiplicacao.addEventListener('click', function() {
-        let operacao = parseFloat(valor1.value) * parseFloat(valor2.value);
-
-        resultado.textContent = operacao;
-    });
-
-    divisao.addEventListener('click', function() {
-        
-        if (valor2.value == 0) {
-            resultado.textContent = 'Você não pode realizar um divisão por 0!';
+    input.addEventListener('input', () => {
+        if (numCaracteres && letrasMaiusculas && letrasMinusculas && numeros) {
+            resultado.textContent = 'Você possui uma senha forte.';
         } else {
-            let operacao = parseFloat(valor1.value) / parseFloat(valor2.value);
-
-            resultado.textContent = operacao;
+            resultado.textContent = 'Você possui uma senha fraca.';
         }
-    });
-
+    })
 })
