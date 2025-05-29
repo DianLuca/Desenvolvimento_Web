@@ -28,6 +28,37 @@ document.getElementById('botao-push').addEventListener('click', () => {
 
 });
 
+
+
+// // Refatoração ? Método push ------------
+// const push = document.getElementById('botao-push');
+// let fruta = document.querySelector('.input-fruta');
+
+// function adicionarElemento(fruta) {
+    
+//     if (fruta === '') {
+//         document.getElementById('resultado-push').innerHTML = 'Insira uma fruta!';
+//         return
+//     } else {
+
+//         let array = [...arrayExemplo];
+
+//         array.push(fruta);
+//         arrayExemplo.push(fruta);
+
+//         document.getElementById('resultado-push').innerHTML = `
+//             <strong>Elementos Adicionados:</strong> ${fruta}.<br>
+//             <strong>Array cópia modificado:</strong> [${array.join(', ')}].<br>
+//             <strong>Array original modificado:</strong> [${arrayExemplo.join(', ')}].
+//         `;
+//     }
+// }
+
+// push.addEventListener('click', () => adicionarElemento(fruta.value));
+
+// // --------------
+
+
 /*
     Método pop()
     Remove o último elemento do array e retorna esse elemento
