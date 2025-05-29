@@ -58,7 +58,3 @@ document.getElementById('numero').addEventListener('keypress', (evento) => {
     
 });
 
-
-
-// keypress 2 = 50
-// keypress 3 = 51
