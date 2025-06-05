@@ -6,21 +6,23 @@ const produto = [
     
 ];
 
-
 const resposta = document.querySelector('#resultado');
 const mostrarItem = document.querySelector('#todos-produtos');
 
+const limpar = () => mostrarItem.textContent = '';
 
 function apresentarItem (nome, valor) {
+    const div = document.createElement('div');
     const h2 = document.createElement('h2');
     const p = document.createElement('p');
 
-    h2.textContent = nome;
-    p.textContent = `R$ ${parseFloat(valor)}`;
+    h2.innerHTML = nome;
+    p.innerHTML = `R$ ${valor.toFixed(2)}`;
 
-    mostrarItem.appendChild(h2);
-    mostrarItem.appendChild(p);
+    div.appendChild(h2);
+    div.appendChild(p);
 
+    mostrarItem.appendChild(div);
 };
 
 // apresentarItem(produto[0].nome, produto[0].valor);
@@ -28,19 +30,26 @@ function apresentarItem (nome, valor) {
 document.addEventListener('input', () => {
 
     const categoriaItem = document.querySelector('#categoria').value;
-    console.log(categoriaItem);
-
     
+    const filtrar = produto.filter((categoria) => {
+            return categoria.categoria === categoriaItem;
+    });
+
+    limpar();
+    filtrar.categoria 
+    filtrar.forEach((produto) => {
+        apresentarItem(produto.nome, produto.valor);
+    })
+
 });
 
 let valorTotal = 0;
 
-const produtos = produto.map((produto) => {
+const produtos = produto.forEach((produto) => {
     const nome = produto.nome;
     const valor = produto.valor;
     valorTotal += produto.valor;
 
     apresentarItem(nome, valor);
-    resposta.textContent = `Valor Total dos itens: R$ ${valorTotal}`;
+    resposta.textContent = `Valor Total dos itens: R$ ${valorTotal.toFixed(2)}`;
 });
-
