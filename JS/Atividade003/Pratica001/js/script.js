@@ -32,14 +32,16 @@ document.addEventListener('change', () => {
     const categoriaItem = document.querySelector('#categoria').value;
     
     if (categoriaItem == 'todos') {
-        limpar()
-        const produtos = produto.forEach((produto) => {
+        limpar();
+
+        produto.forEach((produto) => {
             const nome = produto.nome;
             const valor = produto.valor;
             valorTotal += produto.valor;
         
             apresentarItem(nome, valor, valorTotal);
         });
+
     } else {
         const filtrar = produto.filter((categoria) => {
                 return categoria.categoria === categoriaItem;
@@ -50,7 +52,7 @@ document.addEventListener('change', () => {
         filtrar.forEach((produto) => {
             valorTotal += produto.valor;
             apresentarItem(produto.nome, produto.valor, valorTotal);
-        })
+        });
     };
 });
 
