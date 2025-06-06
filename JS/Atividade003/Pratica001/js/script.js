@@ -2,7 +2,16 @@ const produto = [
     {nome: 'Sabonete Natural', categoria: 'cosmetico', valor: 15.00},
     {nome: 'Shampoo Orgânico', categoria: 'cosmetico', valor: 25.00},
     {nome: 'Granola Artesanal', categoria: 'alimento', valor: 18.50},
-    {nome: 'Mel Puro', categoria: 'alimento', valor: 22.00}
+    {nome: 'Mel Puro', categoria: 'alimento', valor: 22.00},
+
+    {nome: 'Desodorante Vegano', categoria: 'cosmetico', valor: 19.90},
+    {nome: 'Condicionador Natural', categoria: 'cosmetico', valor: 27.50},
+    {nome: 'Biscoito Integral', categoria: 'alimento', valor: 14.75},
+    {nome: 'Geleia Orgânica de Morango', categoria: 'alimento', valor: 20.00},
+    {nome: 'Sabão de Coco Artesanal', categoria: 'limpeza', valor: 12.00},
+    {nome: 'Velas Aromáticas', categoria: 'artesanato', valor: 30.00},
+    {nome: 'Detergente Biodegradável', categoria: 'limpeza', valor: 10.50},
+    {nome: 'Cesto de Palha Trançado', categoria: 'artesanato', valor: 45.00}
     
 ];
 

@@ -22,6 +22,7 @@ main {
 
 section {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     margin: 15px 0;
     gap: 10px;
@@ -30,7 +31,7 @@ section {
 div {
     border: 1px solid #777777;
     padding: 5px 15px;
-    min-width: 260px;
+    width: 360px;
 }
 
 select, option {
