@@ -32,3 +32,8 @@ div {
     padding: 5px 15px;
     min-width: 260px;
 }
+
+select, option {
+    font-size: 1em;
+    padding: 2px;
+}

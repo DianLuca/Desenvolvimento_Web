@@ -6,12 +6,13 @@ const produto = [
     
 ];
 
+let valorTotal = 0;
 const resposta = document.querySelector('#resultado');
 const mostrarItem = document.querySelector('#todos-produtos');
 
 const limpar = () => mostrarItem.textContent = '';
 
-function apresentarItem (nome, valor) {
+function apresentarItem (nome, valor, valorTotal) {
     const div = document.createElement('div');
     const h2 = document.createElement('h2');
     const p = document.createElement('p');
@@ -23,33 +24,38 @@ function apresentarItem (nome, valor) {
     div.appendChild(p);
 
     mostrarItem.appendChild(div);
+    resposta.textContent = `Valor Total dos itens: R$ ${valorTotal.toFixed(2)}.`;
 };
 
-// apresentarItem(produto[0].nome, produto[0].valor);
-
-document.addEventListener('input', () => {
-
+document.addEventListener('change', () => {
+    valorTotal = 0;
     const categoriaItem = document.querySelector('#categoria').value;
     
-    const filtrar = produto.filter((categoria) => {
-            return categoria.categoria === categoriaItem;
-    });
+    if (categoriaItem == 'todos') {
+        limpar()
+        const produtos = produto.forEach((produto) => {
+            const nome = produto.nome;
+            const valor = produto.valor;
+            valorTotal += produto.valor;
+        
+            apresentarItem(nome, valor, valorTotal);
+        });
+    } else {
+        const filtrar = produto.filter((categoria) => {
+                return categoria.categoria === categoriaItem;
+        });
+    
+        limpar();
 
-    limpar();
-    filtrar.categoria 
-    filtrar.forEach((produto) => {
-        apresentarItem(produto.nome, produto.valor);
-    })
-
+        filtrar.forEach((produto) => {
+            valorTotal += produto.valor;
+            apresentarItem(produto.nome, produto.valor, valorTotal);
+        })
+    };
 });
 
-let valorTotal = 0;
 
-const produtos = produto.forEach((produto) => {
-    const nome = produto.nome;
-    const valor = produto.valor;
+produto.forEach((produto) => {
     valorTotal += produto.valor;
-
-    apresentarItem(nome, valor);
-    resposta.textContent = `Valor Total dos itens: R$ ${valorTotal.toFixed(2)}`;
-});
+    apresentarItem(produto.nome, produto.valor, valorTotal);
+})
