@@ -14,11 +14,21 @@ verificar se o valor informado não é zero ou negativo e, nesse caso, exibir um
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal de Exercícios Atividade A</title>
+    <title>Portal de Exercícios - Atividade D</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    
+    <section>
+        <div>
+            <h1>CALCULADORA SALARIAL</h1>
+            <label for="num">Insira seu salário atual:</label>
+            <input type="number" name="num" id="salario" min="0" placeholder="Ex.: 500">
+            <button type="submit" id="verificar">Verificar</button>
+        </div>
+        <div>
+            <p id="resultado"></p>
+        </div>
+    </section>
 
     <script src="../js/script.js"></script>
 </body>
