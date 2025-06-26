@@ -1,7 +1,7 @@
 // Variavéis globais
 
 let verificar = document.querySelector('#verificar');
-let resultado = document.querySelector('#resultado');
+let resultado = document.querySelector('.resultado');
 
 // Atividade A
 
@@ -85,7 +85,7 @@ function radar(velocidade) {
         resultado.textContent = 'Você está acima da velocidade permitida! Reduza a velocidade!';
 
     } else {
-
+        resultado.style.color = "#000000"
         resultado.textContent = 'Você está dentro do limite de velocidade! Boa viagem!';
     }
 };
@@ -236,12 +236,18 @@ function resolver_raiz (valor, valor1, valor2) {
         resultado.textContent = 'Não possuí uma raiz real.';
 
     } else {
+        if (valor === 0){
 
-        let x1 = (-valor1 + raiz_delta)/(2*valor);
+            resultado.textContent = `Não foi possível realizar a operação. O valor de 'a' não pode ser igual a 0!`;
 
-        let x2 = (-valor1 - raiz_delta)/(2*valor);
-
-        resultado.textContent = `O valor das raízes será igual a: ${x1} e ${x2}.`;
+        } else {
+            
+            let x1 = (-valor1 + raiz_delta)/(2*valor);
+            
+            let x2 = (-valor1 - raiz_delta)/(2*valor);
+            
+            resultado.textContent = `O valor das raízes será igual a: ${x1} e ${x2}.`;
+        }
     };
 };
 
@@ -250,9 +256,9 @@ verificar.addEventListener('click', () => {
     let valorB = document.querySelector('#valorB');
     let valorC = document.querySelector('#valorC');
 
-    let valor = parseInt(valorA.value) || 1;
-    let valor1 = parseInt(valorB.value) || 1;
-    let valor2 = parseInt(valorC.value) || 1;
+    let valor = parseInt(valorA.value) || 0;
+    let valor1 = parseInt(valorB.value) || 0;
+    let valor2 = parseInt(valorC.value) || 0;
 
     resolver_raiz(valor, valor1, valor2);
 });

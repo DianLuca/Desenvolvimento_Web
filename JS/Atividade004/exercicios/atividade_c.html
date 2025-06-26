@@ -13,17 +13,18 @@ A empresa SpeedControl Web está desenvolvendo um simulador online para conscien
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <section>
-        <div>
-            <h1>VERIFICAR VELOCIDADE</h1>
-            <label for="num">Insira a sua velocidade:</label>
-            <input type="number" name="num" id="velocidade" min="0" placeholder="Ex.: 0">
-            <button type="submit" id="verificar">Verificar</button>
-        </div>
-        <div>
-            <p id="resultado"></p>
-        </div>
-    </section>
+    <main>
+        <section>
+            <div class="atividade">
+                <h1>VERIFICAR VELOCIDADE</h1>
+                <label for="num">Insira a sua velocidade:</label>
+                <input type="number" name="num" id="velocidade" min="0" placeholder="Ex.: 0">
+                <button type="submit" id="verificar">Verificar</button>
+                <p class="resultado"></p>
+            </div>
+        </section>
+        <a class="voltar" href="../index.html">Voltar</a>
+    </main>
 
     <script src="../js/script.js"></script>
 </body>

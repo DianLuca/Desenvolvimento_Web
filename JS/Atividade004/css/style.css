@@ -3,16 +3,18 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Times New Roman', Times, serif;
+    color: #0D0D0D;
 }
 
-body {
+main {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     flex-direction: column;
     width: 1000px;
     height: 100vh;
-    margin: 10px auto;
+    margin: auto;
+    padding: 10px;
 }
 
 section {
@@ -28,8 +30,40 @@ div, a {
     flex-direction: column;
     text-align: center;
     justify-content: center;
-    background-color: aqua;
+    text-decoration: none;
+    border: 1px solid #000000;
+    font-size: 1.2em;
     width: 400px;
     height: 200px;
     gap: 10px;
+}
+
+a:hover{
+    background-color: #BFBFBF;
+    transition: 0.3s ease;
+}
+
+.atividade {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    height: 100%;
+    gap: 15px;
+    padding: 10px;
+}
+
+button, input {
+    width: 80%;
+    padding: 10px;
+    font-size: 1em;
+}
+
+.resultado{
+    margin: 15px;
+}
+
+.voltar {
+    height: 40px;
+    width: 500px;
 }

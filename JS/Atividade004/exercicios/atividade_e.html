@@ -16,17 +16,18 @@ O valor final deve ser exibido de forma clara, simulando o funcionamento de um s
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <section>
-        <div>
-            <h1>CALCULADORA DE PASSAGEM</h1>
-            <label for="num">Insira a distância até seu destino (Km):</label>
-            <input type="number" name="num" id="distancia" min="0" placeholder="Ex.: 500">
-            <button type="submit" id="verificar">Verificar</button>
-        </div>
-        <div>
-            <p id="resultado"></p>
-        </div>
-    </section>
+    <main>
+        <section>
+            <div class="atividade">
+                <h1>CALCULADORA DE PASSAGEM</h1>
+                <label for="num">Insira a distância até seu destino (Km):</label>
+                <input type="number" name="num" id="distancia" min="0" placeholder="Ex.: 500">
+                <button type="submit" id="verificar">Verificar</button>
+                <p class="resultado"></p>
+            </div>
+        </section>
+        <a class="voltar" href="../index.html">Voltar</a>
+    </main>
 
 
     <script src="../js/script.js"></script>
