@@ -26,7 +26,10 @@ verificar.addEventListener('click', ()=> {
 
 function verificar_maior_menor (valor, valor1, valor2){
     
-    if (valor === valor1 === valor2) {
+    if (valor == valor1 && valor1 == valor2) {
+        console.log(valor);
+        console.log(valor1);
+        console.log(valor2);
         resultado.textContent = 'Todos os valores são iguais!';
     } else {
         const maior =  Math.max(valor, valor1, valor2);
@@ -34,7 +37,7 @@ function verificar_maior_menor (valor, valor1, valor2){
         
         resultado.textContent = `O ${maior} é o número de maior valor, enquanto o ${menor} é menor valor.`;
     }
-
+    
     // let resposta_maior = '';
     // let resposta_menor = '';
     
