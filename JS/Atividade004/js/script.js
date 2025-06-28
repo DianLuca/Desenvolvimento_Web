@@ -25,42 +25,52 @@ verificar.addEventListener('click', ()=> {
 // Atividade B
 
 function verificar_maior_menor (valor, valor1, valor2){
-    let resposta_maior = '';
-    let resposta_menor = '';
-
-    if ((valor > valor1) && (valor > valor2)) {
-        resposta_maior = `O ${valor} é o número de maior valor`;
-        if (valor1 >= valor2) {
-            resposta_menor = `${valor2} é o menor valor`;
-        } else {
-            resposta_menor = `${valor1} é o menor valor`;
-        }
-        
-        resultado.textContent = `${resposta_maior}, enquanto o ${resposta_menor}.`
-
-    } else if ((valor1 > valor) && (valor1 > valor2)) {
-        resposta_maior = `O ${valor1} é o número de maior valor`;
-        if (valor >= valor2) {
-            resposta_menor = `${valor2} é o menor valor`;
-        } else {
-            resposta_menor = `${valor} é o menor valor`;
-        }
-        
-        resultado.textContent = `${resposta_maior}, enquanto o ${resposta_menor}.`
-
-    } else if ((valor2 > valor) && (valor2 > valor1)) {
-        resposta_maior = `O ${valor2} é o número de maior valor`;
-        if (valor >= valor1) {
-            resposta_menor = `${valor1} é o menor valor`;
-        } else {
-            resposta_menor = `${valor} é o menor valor`;
-        }
-
-        resultado.textContent = `${resposta_maior}, enquanto o ${resposta_menor}.`
-
-    } else {
+    
+    if (valor === valor1 === valor2) {
         resultado.textContent = 'Todos os valores são iguais!';
-    };
+    } else {
+        const maior =  Math.max(valor, valor1, valor2);
+        const menor = Math.min(valor, valor1, valor2);
+        
+        resultado.textContent = `O ${maior} é o número de maior valor, enquanto o ${menor} é menor valor.`;
+    }
+
+    // let resposta_maior = '';
+    // let resposta_menor = '';
+    
+    // if ((valor > valor1) && (valor > valor2)) {
+    //     resposta_maior = `O ${valor} é o número de maior valor`;
+    //     if (valor1 >= valor2) {
+    //         resposta_menor = `${valor2} é o menor valor`;
+    //     } else {
+    //         resposta_menor = `${valor1} é o menor valor`;
+    //     }
+        
+    //     resultado.textContent = `${resposta_maior}, enquanto o ${resposta_menor}.`
+
+    // } else if ((valor1 > valor) && (valor1 > valor2)) {
+    //     resposta_maior = `O ${valor1} é o número de maior valor`;
+    //     if (valor >= valor2) {
+    //         resposta_menor = `${valor2} é o menor valor`;
+    //     } else {
+    //         resposta_menor = `${valor} é o menor valor`;
+    //     }
+        
+    //     resultado.textContent = `${resposta_maior}, enquanto o ${resposta_menor}.`
+
+    // } else if ((valor2 > valor) && (valor2 > valor1)) {
+    //     resposta_maior = `O ${valor2} é o número de maior valor`;
+    //     if (valor >= valor1) {
+    //         resposta_menor = `${valor1} é o menor valor`;
+    //     } else {
+    //         resposta_menor = `${valor} é o menor valor`;
+    //     }
+
+    //     resultado.textContent = `${resposta_maior}, enquanto o ${resposta_menor}.`
+
+    // } else {
+    //     resultado.textContent = 'Todos os valores são iguais!';
+    // };
 };
 
 verificar.addEventListener('click', () => {
