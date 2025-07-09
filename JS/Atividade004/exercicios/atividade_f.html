@@ -16,19 +16,20 @@ O portal de curiosidades matemáticas WebYear Checker quer oferecer aos usuário
 <body>
     <main>
         <section>
-            <div class="atividade">
+            <article class="atividade">
                 <h1>ANO BISSEXTO</h1>
                 <form action="">
                     <label for="ano">Insira o ano para verificação:</label>
                     <input type="number" name="ano" id="ano" min="0" placeholder="Ex.: 2024">
-                    <button type="button" id="verificar">Verificar</button>
+                    <button type="button" id="verificarAno">Verificar</button>
                 </form>
                 <p class="resultado"></p>
-            </div>
+            </article>
         </section>
         <a class="voltar" href="../index.html">Voltar</a>
     </main>
 
-    <script src="../js/script.js"></script>
+    <script type="module" src="../js/main.js"></script>
+    <script type="module" src="../js/modules/anoBissexto.js"></script>
 </body>
 </html>

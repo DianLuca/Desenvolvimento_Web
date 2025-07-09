@@ -15,7 +15,7 @@ medidas de três segmentos de reta. O sistema então verifica e informa se esses
 <body>
     <main>
         <section>
-            <div class="atividade">
+            <article class="atividade">
                 <h1>VERIFICAR TRIÂNGULO</h1>
                 <form action="">
                     <label for="segmento">Insira o primeiro segmento para verificação:</label>
@@ -24,14 +24,15 @@ medidas de três segmentos de reta. O sistema então verifica e informa se esses
                     <input type="number" name="segmento1" id="segmento1" min="0" placeholder="Ex.: 3"><br>
                     <label for="segmento2">Insira o terceiro segmento para verificação:</label>
                     <input type="number" name="segmento2" id="segmento2" min="0" placeholder="Ex.: 4">
-                    <button type="button" id="verificar">Verificar</button>
+                    <button type="button" id="verificarTriangulo">Verificar</button>
                 </form>
                 <p class="resultado"></p>
-            </div>
+            </article>
         </section>
         <a class="voltar" href="../index.html">Voltar</a>
     </main>
 
-    <script src="../js/script.js"></script>
+    <script type="module" src="../js/main.js"></script>
+    <script type="module" src="../js/modules/triangulo.js"></script>
 </body>
 </html>

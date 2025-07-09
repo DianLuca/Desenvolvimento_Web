@@ -25,7 +25,7 @@ section {
     padding: 20px;
 }
 
-div, a {
+article, a {
     display: flex;
     flex-direction: column;
     text-align: center;

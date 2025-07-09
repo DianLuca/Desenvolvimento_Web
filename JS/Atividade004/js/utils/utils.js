@@ -1,24 +1,31 @@
 export function validarEntrada(valor) {
 
     let resultado = document.querySelector('.resultado');
+    // console.log(valor);
 
     console.log('Entrou na validação!');
     if (valor === null || valor.trim() === ''){
-        console.log('tá vazio ou nulo!')
-        resultado.textContent = 'O campo não pode ser vazio.';
+        // console.log('tá vazio ou nulo!');
+        resultado.textContent = 'Nenhum campo acima pode ser vazio!';
         return null;
     }
     
     let numero = Number(valor);
     
     if (isNaN(numero)) {
-        resultado.textContent = 'O campo deve conter apenas valores numéricos.';
+        resultado.textContent = 'Informe apenas valores numéricos no(s) campo(s).';
         return null;
     }
     
     return valor;
 };
 
-export function adicionarEventoBotao(botao, funcao) {
+function adicionarEventoBotao(botao, funcao) {
     botao.addEventListener('click', funcao);
+};
+
+export function validarEventoBotao(botao, funcao){
+    if (botao) {
+        adicionarEventoBotao(botao, funcao);
+    };
 };

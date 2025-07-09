@@ -20,19 +20,20 @@ verificar se o valor informado não é zero ou negativo e, nesse caso, exibir um
 <body>
     <main>
         <section>
-            <div class="atividade">
+            <article class="atividade">
                 <h1>CALCULADORA SALARIAL</h1>
                 <form action="">
                     <label for="num">Insira seu salário atual:</label>
                     <input type="number" name="num" id="salario" min="0" placeholder="Ex.: 500">
-                    <button type="button" id="verificar">Verificar</button>
+                    <button type="button" id="verificarSalario">Verificar</button>
                 </form>
                 <p class="resultado"></p>
-            </div>
+            </article>
         </section>
         <a class="voltar" href="../index.html">Voltar</a>
     </main>
 
-    <script src="../js/script.js"></script>
+    <script type="module" src="../js/main.js"></script>
+    <script type="module" src="../js/modules/salario.js"></script>
 </body>
 </html>

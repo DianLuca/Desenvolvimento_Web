@@ -16,7 +16,7 @@ se possível, o processo do cálculo.
 <body>
     <main>
         <section>
-            <div class="atividade">
+            <article class="atividade">
                 <h1>EQUAÇÕES QUADRÁTICAS</h1>
                 <p>ax² - bx + c </p>
                 <form action="">
@@ -26,14 +26,15 @@ se possível, o processo do cálculo.
                     <input type="number" name="valorB" id="valorB" placeholder="Ex.: -6"><br>
                     <label for="valorC">Insira o valor "c" para verificação:</label>
                     <input type="number" name="valorC" id="valorC" placeholder="Ex.: 5">
-                    <button type="button" id="verificar">Verificar</button>
+                    <button type="button" id="verificarEquacoes">Verificar</button>
                 </form>
                 <p class="resultado"></p>
-            </div>
+            </article>
         </section>
         <a class="voltar" href="../index.html">Voltar</a>
     </main>
 
-    <script src="../js/script.js"></script>
+    <script type="module" src="../js/main.js"></script>
+    <script type="module" src="../js/modules/equacoes.js"></script>
 </body>
 </html>
